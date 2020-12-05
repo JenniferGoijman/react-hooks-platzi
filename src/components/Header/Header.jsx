@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import Switch from "../../commons/Switch/Switch";
 import "./Header.css";
 const Header = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { darkTheme, setDarkTheme } = useContext(ThemeContext);
 
   const handleClick = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setDarkTheme(!darkTheme);
   };
 
   return (

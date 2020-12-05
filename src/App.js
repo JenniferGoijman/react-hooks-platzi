@@ -5,12 +5,12 @@ import Characters from "./components/Characters";
 import ThemeContext from "./context/ThemeContext";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-  const value = { theme, setTheme };
-  console.log(theme);
+  const [darkTheme, setDarkTheme] = useState(false);
+  const value = { darkTheme, setDarkTheme };
+
   return (
     <ThemeContext.Provider value={value}>
-      <div className={`App ${theme}`}>
+      <div className={`App ${darkTheme ? "dark" : "light"}`}>
         <Header />
         <Characters />
         <h1>Hola Mundo</h1>
