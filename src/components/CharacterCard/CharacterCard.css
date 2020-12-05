@@ -27,14 +27,21 @@
   cursor: pointer;
 }
 
-img {
+.CharacterCard img {
   width: 100%;
 }
 
-h2 {
+.CharacterCard h2 {
   margin-top: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
+}
+
+@media (max-width: 799px) {
+  .CharacterCard {
+    width: 200px;
+    height: 250px;
+  }
 }
