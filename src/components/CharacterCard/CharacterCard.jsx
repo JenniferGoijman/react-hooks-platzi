@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import "./CharacterCard.css";
+import Heart from "../Heart/Heart";
 
 const CharacterCard = ({ character }) => {
   const { darkTheme } = useContext(ThemeContext);
@@ -14,11 +15,10 @@ const CharacterCard = ({ character }) => {
     <div className={`CharacterCard ${darkTheme ? "dark" : "light"}`}>
       <div className="Header">
         <h2 key={character.id}>{character.name}</h2>
-        <img
-          src={`/img/icon-heart-${isLiked ? "full" : "empty"}.png`}
-          alt=""
-          className="Icon"
-          onClick={handleLike}
+        <Heart
+          isLiked={isLiked}
+          handleLike={handleLike}
+          darkTheme={darkTheme}
         />
       </div>
       <img src={character.image} alt="" className="Image" />
