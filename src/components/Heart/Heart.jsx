@@ -1,6 +1,6 @@
 import React from "react";
 
-const Heart = ({ isLiked, handleLike, darkTheme }) => {
+const Heart = ({ isLiked, onClick, darkTheme }) => {
   return (
     <img
       src={`/img/icon-heart-${
@@ -8,7 +8,7 @@ const Heart = ({ isLiked, handleLike, darkTheme }) => {
       }.png`}
       alt=""
       className="Icon"
-      onClick={handleLike}
+      onClick={onClick}
     />
   );
 };
