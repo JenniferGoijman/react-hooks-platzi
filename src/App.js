@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Characters from "./components/Characters";
+import Characters from "./components/Characters/Characters";
 import ThemeContext from "./context/ThemeContext";
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
       <div className={`App ${darkTheme ? "dark" : "light"}`}>
         <Header />
         <Characters />
-        <h1>Hola Mundo</h1>
       </div>
     </ThemeContext.Provider>
   );

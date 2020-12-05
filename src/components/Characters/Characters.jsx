@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import CharacterCard from "../CharacterCard/CharacterCard";
+import "./Characters.css";
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -12,7 +14,7 @@ const Characters = () => {
   return (
     <div className="Characters">
       {characters.map((character) => (
-        <h2 key={character.id}>{character.name}</h2>
+        <CharacterCard character={character} />
       ))}
     </div>
   );
