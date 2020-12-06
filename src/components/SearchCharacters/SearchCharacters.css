@@ -1,0 +1,10 @@
+.Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Search div {
+  margin-right: 5px;
+}

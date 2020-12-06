@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-
+import "./SearchCharacters.css";
 const SearchCharacters = ({ value, onChange }) => {
   const searchInput = useRef(null);
 
@@ -9,6 +9,7 @@ const SearchCharacters = ({ value, onChange }) => {
 
   return (
     <div className="Search">
+      <div style={{ marginRight: 5 }}>Search by name:</div>
       <input
         type="text"
         value={value}
