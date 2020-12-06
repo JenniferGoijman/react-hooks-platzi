@@ -9,7 +9,7 @@ const SearchCharacters = ({ value, onChange }) => {
 
   return (
     <div className="Search">
-      <div style={{ marginRight: 5 }}>Search by name:</div>
+      <div>Search by name:</div>
       <input
         type="text"
         value={value}
