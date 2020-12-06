@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useReducer, useMemo } from "react";
+import React, {
+  useState,
+  useEffect,
+  useReducer,
+  useMemo,
+  useCallback,
+} from "react";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import Favorites from "../Favorites/Favorites";
 import { initialState, favoriteReducer } from "../../reducers/index";
@@ -30,9 +36,9 @@ const Characters = () => {
     });
   };
 
-  const handleSearch = (searchInput) => {
+  const handleSearch = useCallback((searchInput) => {
     setSearch(searchInput.current.value);
-  };
+  }, []);
 
   const filteredCharacteres = useMemo(
     () =>
