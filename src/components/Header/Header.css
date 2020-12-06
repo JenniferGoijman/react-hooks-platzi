@@ -1,6 +1,13 @@
-.Header {
+.HeaderContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 50px;
+  padding: 0 50px;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 350px) {
+  .HeaderContainer {
+    padding: 0;
+  }
 }

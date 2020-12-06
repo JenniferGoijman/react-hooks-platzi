@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <div className="Header">
+    <div className="HeaderContainer">
       <h1>Rick & Morty</h1>
       <Switch onClick={handleClick} />
     </div>
