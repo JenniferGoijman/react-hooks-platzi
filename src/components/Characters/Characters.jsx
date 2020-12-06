@@ -28,11 +28,10 @@ const Characters = () => {
         : "REMOVE_FROM_FAVORITES",
       payload: favorite,
     });
-    console.log(favorites);
   };
 
-  const handleSearch = (event) => {
-    setSearch(event.target.value);
+  const handleSearch = (searchInput) => {
+    setSearch(searchInput.current.value);
   };
 
   const filteredCharacteres = useMemo(
